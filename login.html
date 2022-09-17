@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
+    <title>Document</title>
+</head>
+<body id="login">
+    <body style="overflow: hidden;">
+        <form class="login-form" name="Login">
+            <h1>Login</h1>
+            <label for="name">Username: </label>
+            <input type="text" id="name" name= "name" placeholder="Name" required>
+            
+            <label for="password">Password: </label>
+            <input type="password" id="password" name="password" placeholder="Password" required><i class="far fa-eye eye-style" id="togglePassword"></i>
+       
+            <button type="submit" style="font-family: cars;" class="submit-button" onclick="validateLogin()"><b>Submit</b></button>
+        </form>
+        <div class="theme-toggle" style="position: fixed; bottom: 0;">
+            <p style="font-size:x-large;">Change theme:</p>
+            <table>
+                <tr>
+                    <th id="rusteze-th">
+                        <a onclick="setTheme('Rusteze')"><img src="rusteze-logo.png" class="theme-toggle-img"></a>
+                    </th>
+                    <th id="dinoco-th">
+                        <a onclick="setTheme('Dinoco')"><img src="dinoco-logo.png" class="theme-toggle-img"></a>
+                    </th>
+                </tr>
+            </table>
+        </div>
+        <script src="index.js"></script>
+</body>
+</html>

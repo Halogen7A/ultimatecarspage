@@ -1,0 +1,285 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik&display=swap');
+@font-face {
+    font-family: cars;
+    src: url(MAGNETOB.TTF);
+}
+
+*, *::after, *::before {
+    box-sizing: border-box;
+}
+
+:root {
+    --main-color-1: #c33332;
+    --main-color-2: #E2C400;
+    --main-color-3: #70d1f4;
+}
+
+
+html, body {
+    margin: 0;
+    overflow: scroll;
+    height: 100%;
+    background: rgb(2,0,36) no-repeat cover;
+    background: linear-gradient(180deg, black 20%, var(--main-color-1) 51%, var(--main-color-2) 95%) no-repeat 100% 100%;
+}
+
+/* INDEX PAGE */
+
+
+#header-img {
+    height: 15rem;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+.container {
+    font-family: cars;
+    font-size: x-large;
+    width: 720px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 5%;
+    padding: 1rem;
+    text-align: center;
+    line-height: 0.5;
+    display: flex;
+    flex-direction: column;
+    align-items:center;
+    background-color: var(--main-color-1);
+    border-radius: 20px;
+    overflow:hidden;
+}
+
+#bg-video {
+    width: 720px;
+}
+
+.register-a, .login-a {
+    text-decoration: none;
+    color: var(--main-color-2);
+    margin: 1.5rem;
+    padding: 1rem 0;
+    box-shadow: inset 0 0 0 0 var(--main-color-2);
+    transition: color .35s ease-in-out, box-shadow .35s ease-in-out;
+}
+
+.register-a:hover, .login-a:hover {
+    box-shadow: inset 140px 0 0 0 var(--main-color-2);
+    color: var(--main-color-1);
+}
+
+.theme-toggle {
+    text-align: center;
+    font-family: cars;
+    margin-top: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.theme-toggle > table {
+    margin-left: 1rem;
+    border: 2.5px solid black;
+    border-radius: 10px;
+}
+
+
+#rusteze-th {
+    padding-right: 6px;
+    border-right:2.5px solid black;
+    transition: background-color .25s ease-in-out;
+    cursor: pointer;
+    
+}
+
+#dinoco-th {
+    transition: background-color .25s ease-in;
+    cursor: pointer;
+}
+
+#rusteze-th:hover, #dinoco-th:hover {
+    background-color: white;
+}
+
+.theme-toggle-img{
+    width: 40px;
+}
+
+
+/* LOGIN & REGISTER PAGE */
+
+
+.login-form {
+    color: aliceblue;
+    font-family: cars;
+    font-size: larger;
+    border-radius: 20px;
+    text-align: center;
+    position: absolute;
+    left: 50%;
+    top: 45%;
+    transform: translate(-50%, -50%);
+    width: 15rem;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    padding: 2rem;
+}
+
+.login-form > input {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    border: 4px solid black;
+    border-radius: 20px;
+    width: 20rem;
+    height: 2.5rem;
+}
+
+.eye-style {
+    margin-top: -2.80rem; 
+    margin-bottom: 2.80rem; 
+    margin-left: 17rem; 
+    color: black;
+    cursor: pointer;
+}
+
+#drop-down {
+    margin-bottom: 2rem;
+    margin-top: 1rem;
+    width: 8rem;
+    font-family: cars;
+    font-size: 1rem;
+}
+
+
+
+.submit-button {
+    background-color: black;
+    color: white;
+    font-size: 1rem;
+    margin-bottom: 1rem;
+    width: 6rem;
+    height: 3rem;
+    border: 3px solid black;
+    border-radius: 20px;
+    transition: color .35s, background-color .35s;
+    cursor: pointer;
+}
+
+.submit-button:hover {
+    background-color: white;
+    color: black;
+}
+
+.login-form > a {
+    color: aliceblue;
+    text-decoration: none;
+}
+
+.alert-display {
+    color: var(--main-color-1);
+}
+
+/* HOME PAGE */
+
+.layout {
+    display: grid;
+    grid-template-columns: 2fr 3fr 3fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-areas: "header header header"
+                         "side-bar products products"
+                         "side-bar products products";
+    grid-gap: 1rem;
+    font-family: cars;
+    background: rgb(2,0,36) no-repeat cover;
+    background: linear-gradient(0deg, black 20%, var(--main-color-1) 51%, var(--main-color-2) 95%) no-repeat 100% 100%;
+}
+
+
+.header {
+    grid-area: header;
+    color: aliceblue;
+    background: url(header-bg-img.jpg) no-repeat fixed 100%;
+    background-position: bottom;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.side-bar {
+    font-size: 2rem;
+    grid-area: side-bar;
+    color: aliceblue;
+}
+
+.side-bar > ul > li {
+    margin-bottom: 2rem;
+    transition: transform 0.5s ease-in-out;
+}
+
+.side-bar > ul > li:hover {
+    transform: translate(10px, 0px);
+    
+}
+
+.products {
+    grid-area: products;
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    font-size: 2rem;
+    color: aliceblue;
+}
+
+.products > div {
+    width: 20rem;
+    height: 20rem;
+    display: flex;
+    justify-content: center;
+    border-radius: 20px;
+
+}
+
+.products > div > p {
+    transition: 0.5s ease-in-out;
+}
+
+.products > div > p:hover{
+    transform: translate(0px, 5px);
+    
+}
+
+.tires {
+    background: url(tire.jpg) no-repeat 100%;
+    background-position: left;
+    background-size: cover;
+}
+
+.cars {
+    background: url(cars.jpg) no-repeat 100%;
+    background-position: left;
+    background-size: cover;
+}
+
+.car-batteries {
+    background: url(car-battery.jpg) no-repeat 100% 100%;
+    background-position: center;
+    background-size: cover;
+}
+
+.wiper-fluid {
+    background: url(fluid.jpg) no-repeat 100% 100%;
+    background-position: center;
+    background-size: cover;
+}
+
+.fuel {
+    background: url(fuel.png) no-repeat 100% 100%;
+    background-position: center;
+    background-size: cover;
+}
+
+

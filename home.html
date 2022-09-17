@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="layout">
+
+        <div class="header">
+            <img src="header.png">
+            <h1>Kachow!</h1>
+        </div>
+
+        <div class="side-bar">
+            <ul style="list-style: none;">
+                <li>Cars</li>
+                <li>Tires</li>
+                <li>Car Batteries</li>
+                <li>Wiper Fluid</li>
+                <li>Fuel</li>
+            </ul>
+        </div>
+        
+        <div class="products">
+            <div class="cars">
+                <p>Cars</p>
+            </div>
+            <div class="tires">
+                <p>Tires</p>
+            </div>
+            <div class="car-batteries">
+                <p>Car Batteries</p>
+            </div>
+            <div class="wiper-fluid">
+                <p>Wiper Fluid</p>
+            </div>
+            <div class="fuel">
+                <p>Fuel</p>
+            </div>
+        </div>
+    </div>
+    <div class="theme-toggle" style="position: fixed; bottom: 0; color: aliceblue;">
+        <p style="font-size:x-large;">Change theme:</p>
+        <table>
+            <tr>
+                <th id="rusteze-th">
+                    <a onclick="setTheme('Rusteze')"><img src="rusteze-logo.png" class="theme-toggle-img"></a>
+                </th>
+                <th id="dinoco-th">
+                    <a onclick="setTheme('Dinoco')"><img src="dinoco-logo.png" class="theme-toggle-img"></a>
+                </th>
+            </tr>
+        </table>
+    </div>
+    <script src="index.js"></script>
+</body>
+</html>
